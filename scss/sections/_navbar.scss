@@ -1,0 +1,19 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+//made gradient into a separate, reusable component
+//in mixins. Note the use actuals are linked in navbar, mixins, style
+//this is in order to @include the gradient under the .menu class
+
+.menu {
+   @include gradient;
+
+    li {
+        padding: 0 0.7rem;
+
+        a{
+            color: $white !important;
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+    }
+}
